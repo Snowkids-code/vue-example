@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <AppMessage />
+    <hr>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/users/10">Go to Users for team 10</router-link>
+    <router-link to="/users/12">Go to Users for team 12</router-link>
+    <hr>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppMessage from "./components/AppMessage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    AppMessage,
+  },
+  data() {
+    return {
+      
+    }
   }
-}
+};
 </script>
 
 <style>
@@ -19,8 +31,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
